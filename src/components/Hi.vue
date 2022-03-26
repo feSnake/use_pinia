@@ -2,7 +2,8 @@
 <template>
   <div class="main">
     <div class="name">Chai</div>
-    <div class="msg">{{ store.hi }}</div>
+    <div class="hi">{{ store.hi }}</div>
+    <div class="count">{{ store.count }}</div>
   </div>
 </template>
 
@@ -16,7 +17,7 @@ const store = mainStore();
   .name {
     color: aqua;
   }
-  .msg {
+  .hi {
     color: brown;
   }
 }

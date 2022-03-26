@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Hi from "./components/Hi.vue";
+import CountButton from "./components/CountButton.vue";
+
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 </script>
@@ -7,6 +9,7 @@ import Hi from "./components/Hi.vue";
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <Hi></Hi>
+  <CountButton></CountButton>
 </template>
 
 <style>

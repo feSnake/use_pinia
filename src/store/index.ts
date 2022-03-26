@@ -10,6 +10,7 @@ export const mainStore = defineStore("main", {
   state: () => {
     return {
       hi: "hi Chai!",
+      count: 0,
     };
   },
   getters: {},
