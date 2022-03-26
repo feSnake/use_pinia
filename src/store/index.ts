@@ -11,9 +11,16 @@ export const mainStore = defineStore("main", {
     return {
       hi: "hi Chai!",
       count: 0,
+      phone: "13811111111",
     };
   },
-  getters: {},
+  getters: {
+    phoneHidden(state) {
+      return state.phone
+        .toString()
+        .replace(/^(\d{3})\d{4}(\d{4})$/, "$1****$2");
+    },
+  },
   actions: {
     changeState() {
       this.count++;
