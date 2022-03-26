@@ -9,7 +9,7 @@ import { defineStore } from "pinia";
 export const mainStore = defineStore("main", {
   state: () => {
     return {
-      hi: "hi chai!",
+      hi: "hi Chai!",
     };
   },
   getters: {},
