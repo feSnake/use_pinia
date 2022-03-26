@@ -21,6 +21,10 @@
       修改手机号验证Getters 是否有缓存
     </button>
   </div>
+
+  <div>
+    <button @click="handleClickGetList">显示新store.list</button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -53,6 +57,10 @@ const handleClickActions = () => {
 
 const handleClickChangePhone = () => {
   store.phone = "13600000000";
+};
+
+const handleClickGetList = () => {
+  store.getProductList();
 };
 </script>
 

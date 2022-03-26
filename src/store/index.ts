@@ -5,6 +5,7 @@
 */
 
 import { defineStore } from "pinia";
+import { productListStore } from "./productList";
 
 export const mainStore = defineStore("main", {
   state: () => {
@@ -15,6 +16,7 @@ export const mainStore = defineStore("main", {
     };
   },
   getters: {
+    // 支持 this, 也支持 'state' 入参的调用
     phoneHidden(): String {
       console.log("phoneHidden调用！！");
       return this.phone.toString().replace(/^(\d{3})\d{4}(\d{4})$/, "$1****$2");
@@ -24,6 +26,9 @@ export const mainStore = defineStore("main", {
     changeState() {
       this.count++;
       this.hi = "hi Chai changeState";
+    },
+    getProductList() {
+      console.log(productListStore().list);
     },
   },
 });
