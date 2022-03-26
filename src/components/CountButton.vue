@@ -15,6 +15,12 @@
   <div>
     <button @click="handleClickActions">修改数据(内部actions)</button>
   </div>
+
+  <div>
+    <button @click="handleClickChangePhone">
+      修改手机号验证Getters 是否有缓存
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -43,6 +49,10 @@ const handleClickMethod = () => {
 
 const handleClickActions = () => {
   store.changeState();
+};
+
+const handleClickChangePhone = () => {
+  store.phone = "13600000000";
 };
 </script>
 

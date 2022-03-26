@@ -16,6 +16,7 @@ export const mainStore = defineStore("main", {
   },
   getters: {
     phoneHidden(state) {
+      console.log("phoneHidden调用！！");
       return state.phone
         .toString()
         .replace(/^(\d{3})\d{4}(\d{4})$/, "$1****$2");
