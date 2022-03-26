@@ -11,6 +11,10 @@
   <div>
     <button @click="handleClickMethod">修改数据($patch + 函数)</button>
   </div>
+
+  <div>
+    <button @click="handleClickActions">修改数据(内部actions)</button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -35,6 +39,10 @@ const handleClickMethod = () => {
     state.count = state.count * 2;
     state.hi = state.hi === "hi Chai!" ? "hi Zhi!" : "hi Chai!";
   });
+};
+
+const handleClickActions = () => {
+  store.changeState();
 };
 </script>
 

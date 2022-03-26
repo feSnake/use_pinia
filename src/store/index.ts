@@ -14,5 +14,10 @@ export const mainStore = defineStore("main", {
     };
   },
   getters: {},
-  actions: {},
+  actions: {
+    changeState() {
+      this.count++;
+      this.hi = "hi Chai changeState";
+    },
+  },
 });
