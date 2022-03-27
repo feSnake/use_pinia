@@ -10,6 +10,7 @@ import CountButton from "./components/CountButton.vue";
   <img alt="Vue logo" src="./assets/logo.png" />
   <Hi></Hi>
   <CountButton></CountButton>
+  <router-view />
 </template>
 
 <style>
