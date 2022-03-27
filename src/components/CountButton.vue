@@ -25,12 +25,31 @@
   <div>
     <button @click="handleClickGetList">显示新store.list</button>
   </div>
+
+  <!-- <el-button>I am ElButton</el-button>
+  <div class="example-basic">
+    <el-time-picker v-model="value1" placeholder="Arbitrary time" />
+    <el-time-picker
+      v-model="value2"
+      arrow-control
+      placeholder="Arbitrary time"
+    />
+  </div> -->
+
+  <el-button @click="increment">{{ number }}</el-button>
 </template>
 
 <script setup lang="ts">
 import { mainStore } from "../store";
+import { $ref } from "vue/macros";
 
 const store = mainStore();
+let number = $ref(0);
+console.log(number);
+
+function increment() {
+  number++;
+}
 
 const handleClick = () => {
   store.count++;
