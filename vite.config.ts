@@ -4,7 +4,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import { visualizer } from "rollup-plugin-visualizer";
-import path from "path";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,6 +21,12 @@ export default defineConfig({
     visualizer(),
   ],
   resolve: {
-    alias: [{ find: "@", replacement: path.resolve(__dirname, "./src") }],
+    alias: [
+      {
+        find: "@",
+        //此处填'/src'也可以
+        replacement: resolve(__dirname, "src"),
+      },
+    ],
   },
 });

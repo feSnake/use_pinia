@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Hi from "./components/Hi.vue";
-import CountButton from "./components/CountButton.vue";
+import Hi from "@/components/Hi.vue";
+import CountButton from "@/components/CountButton.vue";
 import { $ref } from "vue/macros";
 import { useRouter } from "vue-router";
 
@@ -27,19 +27,10 @@ const handleClick = (tabName: any) => {
     <el-tab-pane label="Home" name="Home">Home</el-tab-pane>
     <el-tab-pane label="Setting" name="Setting">Setting</el-tab-pane>
   </el-tabs>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img alt="Vue logo" src="@/assets/logo.png" />
   <Hi></Hi>
   <CountButton></CountButton>
   <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
