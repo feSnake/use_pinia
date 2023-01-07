@@ -8,6 +8,7 @@ import { defineStore } from "pinia";
 import { productListStore } from "./productList";
 
 export const mainStore = defineStore("main", {
+  persist: true,
   state: () => {
     return {
       hi: "hi Chai!",
@@ -17,7 +18,7 @@ export const mainStore = defineStore("main", {
   },
   getters: {
     // 支持 this, 也支持 'state' 入参的调用
-    phoneHidden(): String {
+    phoneHidden(): string {
       console.log("phoneHidden调用！！");
       return this.phone.toString().replace(/^(\d{3})\d{4}(\d{4})$/, "$1****$2");
     },

@@ -10,9 +10,10 @@
   "dependencies": {
     "axios": "^0.26.1",
     "element-plus": "^2.1.6",
-    "pinia": "^2.0.12",
+    "pinia": "^2.0.28",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "pinia-plugin-persistedstate": "^3.0.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
